@@ -1,0 +1,18 @@
+<ivysettings>
+    <settings defaultResolver="main"/>
+    <property name="repo.dir" value="${user.home}/.ivy/local"/>
+    <property name="repo.host" value="ionic-build3.asynchrony.com" />
+    <property name="repo.host.baseurl" value="http://${repo.host}:8081/nexus/content/repositories" />
+    
+    <resolvers>
+        <chain name="main">
+            <filesystem name="internal">
+                <ivy pattern="${repo.dir}/[module]/ivy-[revision].xml" />
+                <artifact pattern="${repo.dir}/[module]/[artifact]-[revision].[ext]" />
+            </filesystem>
+            <ibiblio name="nexus" m2compatible="true" root="${repo.host.baseurl}/thirdparty/"/>
+            <ibiblio name="nexus-deploy" m2compatible="true" root="${repo.host.baseurl}/releases/"/>
+            <ibiblio name="central" m2compatible="true"/>
+        </chain>
+    </resolvers>
+</ivysettings>

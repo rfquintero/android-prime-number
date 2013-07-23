@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="primes" default="publish" basedir="." 
+    xmlns:ivy="antlib:org.apache.ivy.ant">
+    
+  <target name="update-all" description="update all">
+    <ant antfile="build.xml" dir="primes" target="update-all" inheritAll="false"  />
+    <ant antfile="build.xml" dir="primes-test-integration" target="update-all" inheritAll="false"  />
+  </target>
+    
+</project>
