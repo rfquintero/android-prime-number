@@ -11,8 +11,6 @@ lint.xml
 *.class
 
 # Java lib dirs
-*.jar
-libs
 
 # generated files
 bin/
